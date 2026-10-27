@@ -32,11 +32,11 @@ jobs:
           # 2. 获取原作者所有分支的最新更新
           git fetch upstream
 
-          # 3. 定义你需要同步的两个分支
+          # 3. 定义你需要同步的多个分支
           TARGET_BRANCHES=("ksunext-qpr2" "sukisu+ksu-new" "sukisu-susfs" "rksu-16" "ksunext-susfs" "kernelsu-16" )
 
           # 4. 循环遍历并逐个分支合并推送
-          for branch in "${TARGET_BRANCHES[@]}"; do"
+          for branch in "${TARGET_BRANCHES[@]}"; do
             echo "=========================================="
             echo "正在同步分支: ${branch}"
             echo "=========================================="
